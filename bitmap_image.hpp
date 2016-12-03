@@ -1528,7 +1528,7 @@ private:
 
       std::size_t bitmap_logical_size = (height_ * width_ * bytes_per_pixel_) + (height_ * padding) + bih.struct_size() + bfh.struct_size();
 
-      if (bitmap_file_size != bitmap_logical_size)
+      if (bitmap_file_size != bitmap_logical_size+14)
       {
          bfh.clear();
          bih.clear();
